@@ -1,19 +1,19 @@
 component {
-    variables._fw1_version = "4.3.0";
+    variables._fw1_version = "4.3.1";
     /*
-      Copyright (c) 2009-2018, Sean Corfield, Marcin Szczepanski, Ryan Cogswell
+    Copyright (c) 2009-2018, Sean Corfield, Marcin Szczepanski, Ryan Cogswell
 
-      Licensed under the Apache License, Version 2.0 (the "License");
-      you may not use this file except in compliance with the License.
-      You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-      http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
-      Unless required by applicable law or agreed to in writing, software
-      distributed under the License is distributed on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-      See the License for the specific language governing permissions and
-      limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
     */
 
     this.name = hash( getBaseTemplatePath() );
@@ -796,6 +796,10 @@ component {
             if ( !structKeyExists( request, 'context' ) ) {
                 request.context = { };
             }
+            // ensure request.privatecontext is available
+            if ( !structKeyExists( request, 'privatecontext' ) ) {
+                request.privatecontext = { };
+            }
             if ( !structKeyExists( request, 'base' ) ) {
                 if ( structKeyExists( variables, 'framework' ) && structKeyExists( variables.framework, 'base' ) ) {
                     request.base = variables.framework.base;
@@ -826,7 +830,7 @@ component {
      * this can be overridden if you want to change the behavior when
      * FW/1 cannot find a matching view
      */
-    public any function onMissingView( struct rc ) {
+    public any function onMissingView( struct rc, struct prc ) {
         // unable to find a matching view - fail with a nice exception
         viewNotFound();
         // if we got here, we would return the string or struct to be rendered
@@ -843,7 +847,7 @@ component {
      * being set when the error occurred as well as the request context structure.
      * You can also reference the cfcatch variable for details about the error.
      */
-    public void function onPopulateError( any cfc, string property, struct rc ) {
+    public void function onPopulateError( any cfc, string property, struct rc, struct prc ) {
     }
 
     /*
@@ -915,7 +919,7 @@ component {
         } else {
             buildViewQueue();
             internalFrameworkTrace( 'setupView() called' );
-            setupView( rc = request.context );
+            setupView( rc = request.context, prc = request.privatecontext );
             if ( structKeyExists(request._fw1, 'view') ) {
                 internalFrameworkTrace( 'rendering #request._fw1.view#' );
                 out = internalView( request._fw1.view );
@@ -925,7 +929,7 @@ component {
             } else {
                 request._fw1.omvInProgress = true;
                 internalFrameworkTrace( 'onMissingView() called' );
-                out = onMissingView( request.context );
+                out = onMissingView( rc = request.context, prc = request.privatecontext );
             }
 
             buildLayoutQueue();
@@ -1358,7 +1362,7 @@ component {
      * override this to provide request-specific finalization
      * you do not need to call super.setupResponse()
      */
-    public void function setupResponse( struct rc ) { }
+    public void function setupResponse( struct rc, struct prc ) { }
 
     /*
      * override this to provide session-specific initialization
@@ -1387,7 +1391,7 @@ component {
      * populate the request context with globally required data
      * you do not need to call super.setupView()
      */
-    public void function setupView( struct rc ) { }
+    public void function setupView( struct rc, struct prc ) { }
 
     /*
      * use this to override the default view
@@ -1423,7 +1427,7 @@ component {
             request._fw1.omvInProgress = true;
             internalFrameworkTrace( 'view( #path# ) called - onMissingView() called' );
             request.missingView = path;
-            return onMissingView( request.context );
+            return onMissingView( rc = request.context, prc = request.privatecontext );
         }
     }
 
@@ -1632,7 +1636,7 @@ component {
         if ( structKeyExists( cfc, method ) ) {
             try {
                 internalFrameworkTrace( 'calling #lifecycle# controller', tuple.subsystem, tuple.section, method );
-                invoke( cfc, method, { rc : request.context, headers : request._fw1.headers } );
+                invoke( cfc, method, { rc : request.context, headers : request._fw1.headers, prc : request.privatecontext } );
             } catch ( any e ) {
                 setCfcMethodFailureInfo( cfc, method );
                 rethrow;
@@ -1640,7 +1644,7 @@ component {
         } else if ( structKeyExists( cfc, 'onMissingMethod' ) ) {
             try {
                 internalFrameworkTrace( 'calling #lifecycle# controller (via onMissingMethod)', tuple.subsystem, tuple.section, method );
-                invoke( cfc, method, { rc : request.context, method : lifecycle, headers : request._fw1.headers } );
+                invoke( cfc, method, { rc : request.context, method : lifecycle, headers : request._fw1.headers, prc : request.privatecontext } );
             } catch ( any e ) {
                 setCfcMethodFailureInfo( cfc, method );
                 rethrow;
@@ -1962,6 +1966,7 @@ component {
 
     private string function internalLayout( string layoutPath, string body ) {
         var rc = request.context;
+        var prc = request.privatecontext;
         var $ = { };
         // integration point with Mura:
         if ( structKeyExists( rc, '$' ) ) {
@@ -1980,6 +1985,7 @@ component {
 
     private string function internalView( string viewPath, struct args = { } ) {
         var rc = request.context;
+        var prc = request.privatecontext;
         var $ = { };
         // integration point with Mura:
         if ( structKeyExists( rc, '$' ) ) {
@@ -2822,6 +2828,9 @@ component {
             if ( !structKeyExists(request, 'context') ) {
                 request.context = { };
             }
+            if ( !structKeyExists(request, 'privatecontext') ) {
+                request.privatecontext = { };
+            }
             // SES URLs by popular request :)
             if ( len( pathInfo ) > len( request._fw1.cgiScriptName ) && left( pathInfo, len( request._fw1.cgiScriptName ) ) == request._fw1.cgiScriptName ) {
                 // canonicalize for IIS:
@@ -2982,7 +2991,7 @@ component {
 
     private void function setupResponseWrapper() {
         internalFrameworkTrace( 'setupResponse() called' );
-        setupResponse( rc = request.context );
+        setupResponse( rc = request.context, prc = request.privatecontext );
     }
 
     private void function setupSessionWrapper() {
