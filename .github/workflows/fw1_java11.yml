@@ -10,7 +10,7 @@ jobs:
   test:
     strategy:
       matrix:
-        engine: [ lucee@6, lucee@5, lucee@4.5, adobe@2023, adobe@2021, adobe@2018, adobe@2016, adobe@11, boxlang@be ]
+        engine: [ lucee@6, lucee@5, adobe@2023, adobe@2021, adobe@2018, adobe@2016, boxlang@be ]
 
     runs-on: ubuntu-latest
 
