@@ -1,4 +1,4 @@
-# FW/1 (Framework One) [![Build Status](https://travis-ci.org/framework-one/fw1.png)](https://travis-ci.org/framework-one/fw1)
+# FW/1 (Framework One) ![Build Status](https://github.com/framework-one/fw1/actions/workflows/fw1_java11.yml/badge.svg)
 
 This FW/1 directory is a complete web application and expects to live in its own
 webroot if you plan to run the applications within it. To use FW/1 in a separate
