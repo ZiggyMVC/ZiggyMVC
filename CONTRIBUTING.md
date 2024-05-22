@@ -2,11 +2,11 @@ Contributing to Framework One (FW/1, DI/1, AOP/1)
 ==
 Please note that in order to encourage more people to get involved with Framework One, we have adopted a [Code of Conduct](CODE_OF_CONDUCT.md) so that _everyone_ should feel welcome and safe when getting involved with any aspect of the Framework One community.
 
-All development happens in the main [Framework One repository](https://github.com/framework-one/fw1) on the **develop** branch. Feel free to fork the repo and submit Pull Requests on the **develop** branch. You can also open issues there to discuss potential enhancements etc. You can also discuss bugs and enhancements on [Gitter](https://gitter.im/framework-one/fw1) or [Slack](https://cfml.slack.com/messages/fw1/). You can sign into Gitter directly using your GitHub credentials. For Slack, you'll need to [request an account](http://cfml-slack.herokuapp.com/).
+All development happens in the main [Framework One repository](https://github.com/framework-one/fw1) on the **develop** branch. Feel free to fork the repo and submit Pull Requests on the **develop** branch. You can also open issues there to discuss potential enhancements etc. 
 
-Pull Requests that contain new/updated tests for the bug fix / enhancement will be looked on more favorably than those that do not contain fixes. Travis-CI automatically runs the test suite for Pull Requests which helps us be confident that the Pull Request is "good".
+You can also discuss bugs and enhancements on [Gitter](https://gitter.im/framework-one/fw1) or [Slack](https://cfml.slack.com/messages/fw1/). You can sign into Gitter directly using your GitHub credentials. For Slack, you'll need to [request an account](http://cfml-slack.herokuapp.com/).
 
-Look at `run-tests-example.sh` to see how to run tests locally (copy that shell script to `run-tests.sh` - which is ignored by Git - and modify it to match your local setup). You'll need a fair bit of machinery setup for testing!
+Pull Requests that contain new/updated tests for the bug fix / enhancement will be looked on more favorably than those that do not contain fixes. Github Workflows automatically runs the test suite for Pull Requests which helps us be confident that the Pull Request is "good".
 
 Please follow the same formatting as the existing code, especially in terms of spacing around operators, parentheses, braces and so on. If in doubt, ask on the mailing list.
 
