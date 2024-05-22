@@ -23,9 +23,9 @@ Please read the [Framework One Code of Conduct](https://github.com/framework-one
 
 # Running the Tests
 
-FW/1 is setup to run tests on [Travis CI](https://travis-ci.org/framework-one/fw1) using the `.travis.yml` file.
+FW/1 is setup to run tests using [GitHub Actions](https://github.com/framework-one/fw1/actions/workflows/fw1_java11.yml) using the `.fw1_java11.yml` workflow file.
 
-To run tests manually, you'll need [CommandBox](https://www.ortussolutions.com/products/commandbox) installed.
+To run tests locally, you'll need [CommandBox](https://www.ortussolutions.com/products/commandbox) installed.
 
 Then run `box install` once to install the dependencies (TestBox is the only one currently).
 
