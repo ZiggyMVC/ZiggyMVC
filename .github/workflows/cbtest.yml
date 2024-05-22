@@ -26,13 +26,13 @@ jobs:
         distribution: 'temurin'
         
     - name: Install the ortus security key
-      run: apt-key adv --keyserver keys.gnupg.net --recv 6DA70622
+      run: curl -fsSl https://downloads.ortussolutions.com/debs/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/ortussolutions.gpg > /dev/null
 
     - name: Add the commandbox source
-      run: sudo echo "deb http://downloads.ortussolutions.com/debs/noarch /" | sudo tee -a /etc/apt/sources.list.d/commandbox.list
+      run: echo "deb [signed-by=/usr/share/keyrings/ortussolutions.gpg] https://downloads.ortussolutions.com/debs/noarch /" | sudo tee /etc/apt/sources.list.d/commandbox.list
 
     - name: Update apt and install commandbox
-      run: sudo apt-get update && sudo apt-get --assume-yes install commandbox
+      run: sudo apt-get update && sudo apt-get install apt-transport-https commandbox
 
     - name: Install dependencies
       run: box install
