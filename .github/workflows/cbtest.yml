@@ -38,10 +38,4 @@ jobs:
       run: box server start cfengine=${{ matrix.engine }} port=8500 openbrowser=false
     
     - name: Run test
-      run: box testbox run reporter=mintext > ${{ matrix.engine }}_output.log
-    
-    - name: Upload output file
-      uses: actions/upload-artifact@v4
-      with:
-        name: output-log-file
-        path: ${{ matrix.engine }}_output.log
+      run: box testbox run reporter=mintext
