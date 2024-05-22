@@ -10,7 +10,7 @@ jobs:
   test:
     strategy:
       matrix:
-        engine: [ boxlang ]
+        engine: [ boxlang@be ]
 
     runs-on: ubuntu-latest
 
