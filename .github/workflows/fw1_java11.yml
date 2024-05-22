@@ -1,4 +1,4 @@
-name: fw1 CI
+name: fw1 Java 11
 
 on:
   push:
