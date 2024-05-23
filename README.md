@@ -23,7 +23,7 @@ Please read the [Framework One Code of Conduct](https://github.com/framework-one
 
 # Running the Tests
 
-FW/1 is setup to run tests using [GitHub Actions](https://github.com/framework-one/fw1/actions/workflows/fw1_java11.yml) using the `.fw1_java11.yml` workflow file.
+FW/1 is setup to run tests using [GitHub Actions](https://github.com/framework-one/fw1/actions/workflows/fw1_java11.yml) using the `fw1_java11.yml` and `fw1_boxlang.yml` workflow files.
 
 To run tests locally, you'll need [CommandBox](https://www.ortussolutions.com/products/commandbox) installed.
 
@@ -45,6 +45,6 @@ If you get any failures, you can run this with more verbose, but still compact o
 
 # Copyright and License
 
-Copyright (c) 2009-2018, Sean Corfield (and others -- see individual files for additional copyright holders). All rights reserved.
+Copyright (c) 2009-2024, Sean Corfield (and others -- see individual files for additional copyright holders). All rights reserved.
 The use and distribution terms for this software are covered by the Apache Software License 2.0 (http://www.apache.org/licenses/LICENSE-2.0) which can also be found in the file LICENSE at the root of this distribution and in individual licensed files.
 By using this software in any fashion, you are agreeing to be bound by the terms of this license. You must not remove this notice, or any other, from this software.
