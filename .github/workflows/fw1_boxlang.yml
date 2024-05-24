@@ -34,6 +34,12 @@ jobs:
     - name: Install boxlang
       run: box install commandbox-boxlang
 
+    - name: Install bx-compat
+      run: box install bx-compat
+
+    - name: Install unsafe evaluate (NOTE: Remove when evaluate() is removed from TestBox)
+      run: box install bx-unsafe-evaluate
+
     - name: Install dependencies
       run: box install
 
