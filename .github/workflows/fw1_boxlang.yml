@@ -37,7 +37,7 @@ jobs:
     - name: Install bx-compat
       run: box install bx-compat
 
-    - name: Install unsafe evaluate (NOTE: Remove when evaluate() is removed from TestBox)
+    - name: Install unsafe evaluate (NOTE Remove when evaluate() is removed from TestBox)
       run: box install bx-unsafe-evaluate
 
     - name: Install dependencies
