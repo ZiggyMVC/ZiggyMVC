@@ -34,18 +34,21 @@ jobs:
     - name: Install boxlang
       run: box install commandbox-boxlang
 
-    - name: Install bx-compat
-      run: box install bx-compat
-
-    - name: Install unsafe evaluate (NOTE Remove when evaluate() is removed from TestBox)
-      run: box install bx-unsafe-evaluate
-
-    - name: Install dependencies
-      run: box install
-
     - name: Start the ${{ matrix.engine }} CFML engine
       run: box server start cfengine=${{ matrix.engine }} port=8500 openbrowser=false javaVersion=openjdk21_jdk
 
+    - name: Install bx-compat
+      run: box install bx-compat
+
+    - name: Stop boxlang after bx-compat install
+      run: box server stop
+
+    - name: Restart boxlang after bx-compat install
+      run: box server start cfengine=${{ matrix.engine }} port=8500 openbrowser=false javaVersion=openjdk21_jdk
+
+    - name: Install dependencies
+      run: box install
+      
     - name: Run test
       run: |        
         testResults="echo $(box testbox run reporter=mintext)";
