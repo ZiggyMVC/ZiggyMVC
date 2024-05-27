@@ -46,8 +46,8 @@ jobs:
     - name: Restart boxlang after bx-compat install
       run: box server start cfengine=${{ matrix.engine }} port=8500 openbrowser=false javaVersion=openjdk21_jdk
 
-    - name: Install dependencies
-      run: box install
+    - name: Install testbox dependency
+      run: box install testbox
       
     - name: Run test
       run: |        
