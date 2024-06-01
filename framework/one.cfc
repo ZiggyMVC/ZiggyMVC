@@ -2367,7 +2367,7 @@ component {
             optionalOmit = true;
         }
         if ( optionalOmit ) {
-            if ( getRequestParam("SESOmitIndex") ) {
+            if ( variables.framework.SESOmitIndex ) {
                 path = getDirectoryFromPath( path );
                 omitIndex = true;
             }
@@ -2831,9 +2831,7 @@ component {
                 "decodeRequestBody" : variables.framework.decodeRequestBody, 
                 "routesCaseSensitive" : variables.framework.routesCaseSensitive,
                 "preflightOptions" : variables.framework.preflightOptions,       
-                "optionsAccessControl" : variables.framework.optionsAccessControl,       
-                "generateSES" : variables.framework.generateSES,
-                "SESOmitIndex" : variables.framework.SESOmitIndex 
+                "optionsAccessControl" : variables.framework.optionsAccessControl 
             };
 
             // if we're in a subsystem request and that subsystem has a specific config for it, apply those overrides
@@ -2939,7 +2937,7 @@ component {
                 default: request._fw1.currentRoute = '/' & pathInfo[1] & '/' & pathInfo[2] & '/'; break;
                 }
             }
-            if ( ( sesN > 0 || getRequestParam("generateSES") ) && getBaseURL() != 'useRequestURI' ) {
+            if ( ( sesN > 0 || variables.framework.generateSES ) && getBaseURL() != 'useRequestURI' ) {
                 request._fw1.generateSES = true;
             }
             for ( var sesIx = 1; sesIx <= sesN; sesIx = sesIx + 1 ) {
