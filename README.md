@@ -1,4 +1,7 @@
-# FW/1 (Framework One) ![Build Status](https://github.com/framework-one/fw1/actions/workflows/fw1_java11.yml/badge.svg) 
+![fw1_logo](https://github.com/framework-one/fw1/blob/develop/css/fw1logo7.jpg)
+
+# FW/1 (Framework One) 
+![Build Status](https://github.com/framework-one/fw1/actions/workflows/fw1_java11.yml/badge.svg) 
 ![4.3.2 Deploy Status](https://github.com/framework-one/fw1/actions/workflows/deploy_4.3.2.yml/badge.svg) 
 
 [//]: # "![Build Status](https://github.com/framework-one/fw1/actions/workflows/fw1_boxlang.yml/badge.svg)"
