@@ -1,4 +1,5 @@
 # FW/1 (Framework One) ![Build Status](https://github.com/framework-one/fw1/actions/workflows/fw1_java11.yml/badge.svg) 
+![4.3.2 Deploy Status](https://github.com/framework-one/fw1/actions/workflows/deploy_4.3.2.yml/badge.svg) 
 
 [//]: # "![Build Status](https://github.com/framework-one/fw1/actions/workflows/fw1_boxlang.yml/badge.svg)"
 
@@ -12,6 +13,8 @@ in your admin - you can't just use a per-application mapping.
 Please read the [Framework One Code of Conduct](https://github.com/framework-one/fw1/blob/develop/CODE_OF_CONDUCT.md) - we want FW/1 to be a welcoming and supportive environment for everyone to feel comfortable contributing!
 
 # Resources
+
+**Demo sites:** v4.3.2 - https://fw1-4.3.2.mycfspace.org
 
 **Project home:** https://github.com/framework-one/fw1
 
