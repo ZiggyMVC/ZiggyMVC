@@ -15,7 +15,7 @@
 				<cfoutput>#body#</cfoutput>
 			</div>
 			<div class="text-center">
-				<a href="https://github.com/framework-one/fw1">FW/1</a> is copyright (c) 2009-<cfoutput>#year( now() )#</cfoutput> Sean Corfield, Marcin Szczepanski, Ryan Cogswell -
+				<a href="https://github.com/southofshasta/cf-mvc">FW/1</a> is copyright (c) 2009-<cfoutput>#year( now() )#</cfoutput> Sean Corfield, Marcin Szczepanski, Ryan Cogswell -
 			<a href="http://www.apache.org/licenses/LICENSE-2.0">Licensed under the Apache License, Version 2.0</a><br />
 				You are running FW/1 version <cfoutput>#variables.framework.version# on #server.coldfusion.productname & " " &
 					( structKeyExists( server, "lucee" ) ?

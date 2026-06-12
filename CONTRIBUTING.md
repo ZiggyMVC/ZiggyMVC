@@ -2,9 +2,9 @@ Contributing to Framework One (FW/1, DI/1, AOP/1)
 ==
 Please note that in order to encourage more people to get involved with Framework One, we have adopted a [Code of Conduct](CODE_OF_CONDUCT.md) so that _everyone_ should feel welcome and safe when getting involved with any aspect of the Framework One community.
 
-All development happens in the main [Framework One repository](https://github.com/framework-one/fw1) on the **develop** branch. Feel free to fork the repo and submit Pull Requests on the **develop** branch. You can also open issues there to discuss potential enhancements etc. 
+All development happens in the main [Framework One repository](https://github.com/southofshasta/cf-mvc) on the **develop** branch. Feel free to fork the repo and submit Pull Requests on the **develop** branch. You can also open issues there to discuss potential enhancements etc.
 
-You can also discuss bugs and enhancements on [Gitter](https://gitter.im/framework-one/fw1) or [Slack](https://cfml.slack.com/messages/fw1/). You can sign into Gitter directly using your GitHub credentials. For Slack, you'll need to [request an account](http://cfml-slack.herokuapp.com/).
+You can also discuss bugs and enhancements on [Slack](https://cfml.slack.com/messages/fw1/). For Slack, you'll need to [request an account](http://cfml-slack.herokuapp.com/).
 
 Pull Requests that contain new/updated tests for the bug fix / enhancement will be looked on more favorably than those that do not contain fixes. Github Workflows automatically runs the test suite for Pull Requests which helps us be confident that the Pull Request is "good".
 
@@ -14,4 +14,3 @@ By submitting a Pull Request, you are granting copyright license to Sean Corfiel
 
 The **master** branch represents the current stable release of FW/1. Do not submit Pull Requests against **master**. Showstopping bugs should be raised as issues and fixes will be applied to **develop** (if appropriate) and backported to **master** manually.
 
-**Note:** Do not submit Pull Requests against [Sean's personal fork](https://github.com/seancorfield/fw1) - that exists for historical reasons and Github doesn't let you turn Pull Requests off.
