@@ -10,3 +10,4 @@ settings.xml
 *.ipr
 *.idea
 run-tests.sh
+.claude/settings.local.json
