@@ -1,8 +1,8 @@
 {
     "name":"Framework One",
-    "slug":"fw1",
-    "version":"4.3.0",
-    "author":"Sean Corfield, Marcin Szczepanski, Ryan Cogswell",
+    "slug":"cf-mvc",
+    "version":"5.0.0",
+    "author":"South of Shasta",
     "location":"southofshasta/cf-mvc#develop",
     "createPackageDirectory":true,
     "packageDirectory":"framework",
