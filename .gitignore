@@ -11,3 +11,4 @@ settings.xml
 *.idea
 run-tests.sh
 .claude/settings.local.json
+.vscode/settings.json
