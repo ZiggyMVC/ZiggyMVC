@@ -1,4 +1,10 @@
-# FW/1 (Framework One) [![Build Status](https://travis-ci.org/framework-one/fw1.png)](https://travis-ci.org/framework-one/fw1) [![Join the chat at https://gitter.im/framework-one/fw1](https://badges.gitter.im/framework-one/fw1.svg)](https://gitter.im/framework-one/fw1?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+![fw1_logo](https://github.com/southofshasta/cf-mvc/blob/develop/css/fw1logo7.jpg)
+
+# FW/1 (Framework One)
+![Build Status](https://github.com/southofshasta/cf-mvc/actions/workflows/fw1_java11.yml/badge.svg)
+![4.3.2 Deploy Status](https://github.com/southofshasta/cf-mvc/actions/workflows/deploy_4.3.2.yml/badge.svg)
+
+[//]: # "![Build Status](https://github.com/southofshasta/cf-mvc/actions/workflows/fw1_boxlang.yml/badge.svg)"
 
 This FW/1 directory is a complete web application and expects to live in its own
 webroot if you plan to run the applications within it. To use FW/1 in a separate
@@ -7,13 +13,15 @@ for `/framework` to the `framework` folder inside this FW/1 directory. Note that
 your `Application.cfc` needs to extend `framework.one`, you have to add the mapping
 in your admin - you can't just use a per-application mapping.
 
-Please read the [Framework One Code of Conduct](https://github.com/framework-one/fw1/blob/develop/CODE_OF_CONDUCT.md) - we want FW/1 to be a welcoming and supportive environment for everyone to feel comfortable contributing!
+Please read the [Framework One Code of Conduct](https://github.com/southofshasta/cf-mvc/blob/develop/CODE_OF_CONDUCT.md) - we want FW/1 to be a welcoming and supportive environment for everyone to feel comfortable contributing!
 
 # Resources
 
-**Project home:** https://github.com/framework-one/fw1
+**Demo sites:** v4.3.2 - https://fw1-4.3.2.mycfspace.org
 
-**Documentation / Wiki:** http://framework-one.github.io/documentation/ / http://github.com/framework-one/fw1/wiki
+**Project home:** https://github.com/southofshasta/cf-mvc
+
+**Documentation / Wiki:** http://framework-one.github.io/documentation/ / http://github.com/southofshasta/cf-mvc/wiki
 
 **Blog:** http://framework-one.github.io
 
@@ -23,7 +31,7 @@ Please read the [Framework One Code of Conduct](https://github.com/framework-one
 
 # Running the Tests
 
-FW/1 is setup to run tests on [Travis CI](https://travis-ci.org/framework-one/fw1) using the `.travis.yml` file.
+FW/1 is setup to run tests using [GitHub Actions](https://github.com/southofshasta/cf-mvc/actions/workflows/fw1_java11.yml) using the `fw1_java11.yml` and `fw1_boxlang.yml` workflow files.
 
 To run tests manually, you'll need [CommandBox](https://www.ortussolutions.com/products/commandbox) installed.
 
