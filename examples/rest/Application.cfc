@@ -12,7 +12,7 @@ component {
         return request._framework_one;
     }
 
-    // delegation of lifecycle methods to FW/1:
+    // delegation of lifecycle methods to Ziggy MVC:
     function onApplicationStart() {
         return _get_framework_one().onApplicationStart();
     }

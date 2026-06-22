@@ -1,4 +1,4 @@
-<h1>Test Remote Method Call Through FW/1</h1>
+<h1>Test Remote Method Call Through Ziggy MVC</h1>
 <p><a href="remote/Test.cfc?method=test" target="_blank">Simple in browser invocation</a>!</p>
 <cftry>
 	<cfset ws = createObject( "webservice", "http://#CGI.SERVER_NAME#:#CGI.SERVER_PORT#/examples/remote/remote/Test.cfc?WSDL") />

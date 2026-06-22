@@ -42,16 +42,16 @@ component extends="framework.one" {
 		baseURL = 'useCgiScriptName',
 		// location used to find controllers / services:
 		// cfcbase = essentially base with / replaced by .
-		// list of file extensions that FW/1 should not handle:
+		// list of file extensions that Ziggy should not handle:
 		unhandledExtensions = 'cfc',
-		// list of (partial) paths that FW/1 should not handle:
+		// list of (partial) paths that Ziggy should not handle:
 		unhandledPaths = '/flex2gateway',
 		// flash scope magic key and how many concurrent requests are supported:
 		preserveKeyURLKey = 'fw1pk',
 		maxNumContextsPreserved = 10,
 		// set this to true to cache the results of fileExists for performance:
 		cacheFileExists = false,
-		// change this if you need multiple FW/1 applications in a single CFML application:
+		// change this if you need multiple Ziggy applications in a single CFML application:
 		applicationKey = 'framework.one',
         // change this if you want a different dependency injection engine:
         diEngine = 'di1',

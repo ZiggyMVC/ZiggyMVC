@@ -15,7 +15,7 @@ component {
     function _get_framework_one() {
         if ( !structKeyExists( request, '_framework_one' ) ) {
 
-            // create your FW/1 application:
+            // create your ZiggyMVC application:
             request._framework_one = new framework.one( {
                 trace = true,
                 missingview = 'main.missingview',
@@ -23,7 +23,7 @@ component {
                     .replaceFirst( getContextRoot(), '' ) & 'introduction'
             } );
 
-            // you can specify FW/1 configuration as an argument:
+            // you can specify ZiggyMVC configuration as an argument:
             // request._framework_one = new framework.one({
             //     base : '/app',
             //     trace : true
@@ -40,7 +40,7 @@ component {
         return request._framework_one;
     }
 
-    // delegation of lifecycle methods to FW/1:
+    // delegation of lifecycle methods to ZiggyMVC:
     function onApplicationStart() {
         return _get_framework_one().onApplicationStart();
     }

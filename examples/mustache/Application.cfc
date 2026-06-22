@@ -17,7 +17,7 @@ component extends=framework.one {
         variables.mustacheProxies = makeMethodProxies( [ "buildURL", "view" ] );
     }
 
-    // we must override this to change the file extension that FW/1 looks for:
+    // we must override this to change the file extension that Ziggy looks for:
     public string function customizeViewOrLayoutPath( struct pathInfo, string type, string fullPath ) {
         return '#pathInfo.base##type#s/#pathInfo.path#.html';
     }

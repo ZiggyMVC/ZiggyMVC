@@ -1,6 +1,6 @@
 component extends="framework.one" {
 
-	// FW/1 - configuration:
+	// Ziggy - configuration:
 	variables.framework = {
 		home = "user.default",
         trace = true

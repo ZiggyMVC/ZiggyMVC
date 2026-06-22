@@ -9,7 +9,7 @@ component extends="mxunit.framework.TestCase" {
             var facade = new framework.facade();
             fail( "facade creation did not fail" );
         } catch ( FW1.FacadeException e ) {
-            assertEquals( "Unable to locate FW/1 for this request", e.message );
+            assertEquals( "Unable to locate Ziggy MVC for this request", e.message );
         } catch ( any e ) {
             fail( "caught unexpected exception: " & e.message );
         }
@@ -19,7 +19,7 @@ component extends="mxunit.framework.TestCase" {
         var fw = new framework.one();
         fw.onRequestStart( "" );
         var facade = new framework.facade();
-        assertTrue( structKeyExists( facade, "getBeanFactory" ), "Constructed facade does not look like FW/1" );
+        assertTrue( structKeyExists( facade, "getBeanFactory" ), "Constructed facade does not look like Ziggy MVC" );
     }
 
 }

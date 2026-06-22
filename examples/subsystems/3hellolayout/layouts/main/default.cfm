@@ -1,2 +1,2 @@
-<h1>Welcome to FW/1!</h1>
+<h1>Welcome to Ziggy MVC!</h1>
 <cfoutput>#body#</cfoutput>
