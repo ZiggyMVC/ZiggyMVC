@@ -55,7 +55,8 @@ component {
             // recent FW/1 + DI/1 + AOP/1 exclusions:
             '/framework/aop.cfc', '/framework/beanProxy.cfc',
             '/framework/ioc.cfc', '/framework/WireBoxAdapter.cfc',
-            '/framework/one.cfc'
+            '/framework/one.cfc',
+            '/framework/ziggy.cfc'
         ];
         variables.listeners = 0;
         setupFrameworkDefaults();
