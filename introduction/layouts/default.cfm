@@ -13,7 +13,7 @@
 				<cfoutput>#body#</cfoutput>
 			</div>
 			<div class="text-center">
-				<a href="https://github.com/southofshasta/ZiggyMVC">Ziggy MVC</a> is copyright (c) 2026-<cfoutput>#year( now() )#</cfoutput> South of Shasta -
+				<a href="https://github.com/ZiggyMVC/ZiggyMVC">Ziggy MVC</a> is copyright (c) 2026-<cfoutput>#year( now() )#</cfoutput> South of Shasta -
 			<a href="http://www.apache.org/licenses/LICENSE-2.0">Licensed under the Apache License, Version 2.0</a><br />
 				You are running Ziggy MVC version <cfoutput>#variables.framework.version# on #server.coldfusion.productname & " " &
 					( structKeyExists( server, "lucee" ) ?
