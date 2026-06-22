@@ -4,7 +4,7 @@ Ziggy MVC is an MVC framework the CFML community, created originally as Framewor
 
 Ziggy MVC is backwards compatible with Framework-1. Your applications should work as-is on the Ziggy MVC codebase. Additionally, all of the
 
-FW/1 documentation and same code is still valid and works with Ziggy MVC. We have not (yet) made any breaking changes to the framework. Any such updates will be documented.
+FW/1 documentation and sample code is still valid and works with Ziggy MVC. We have not (yet) made any breaking changes to the framework. Any such updates will be documented. You just need to use ziggy.cfc instead of one.cfc in your Application.cfc file.
 
 Please read the [Ziggy MVC Code of Conduct](https://github.com/southofshasta/ZiggyMVC/blob/develop/CODE_OF_CONDUCT.md) - we want Ziggy MVC to be a welcoming and supportive environment for everyone to feel comfortable contributing!
 
