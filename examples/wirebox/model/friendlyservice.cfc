@@ -1,7 +1,7 @@
 component {
 
     function greeting() {
-        return "Hello from Wirebox-provided, FW/1-autowired friendly service!";
+        return "Hello from Wirebox-provided, Ziggy MVC-autowired friendly service!";
     }
 
 }

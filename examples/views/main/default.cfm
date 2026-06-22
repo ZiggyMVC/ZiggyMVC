@@ -1,5 +1,5 @@
-<h1>Welcome to the Framework One examples - with subsystems!</h1>
-<p>This shows how individual FW/1 applications can be reused as
+<h1>Welcome to the Ziggy MVC examples - with subsystems!</h1>
+<p>This shows how individual Ziggy MVC applications can be reused as
 	subsystems in a larger application with no code changes!</p>
 <h2>Examples</h2>
 <cfoutput>

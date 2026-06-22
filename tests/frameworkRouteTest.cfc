@@ -131,7 +131,7 @@ component extends="tests.InjectableTest" {
     }
 
     public void function testCustomURL() {
-        // since we are not running FW/1 "properly", get the stem of the
+        // since we are not running Ziggy "properly", get the stem of the
         // test suite file as the prefix, so lets strip anything up to the .cfm
         var uri = variables.fw.buildCustomURL( "/product/123" );
         uri = REReplace( uri, "^.*\.cf[cm]", "" );
@@ -141,7 +141,7 @@ component extends="tests.InjectableTest" {
     public void function testCustomURLWithVariables() {
         // setup our RC:
         request.context = { id = 123, type = "string", ignore = { notSimple = 123 } };
-        // since we are not running FW/1 "properly", get the stem of the
+        // since we are not running Ziggy "properly", get the stem of the
         // test suite file as the prefix, so lets strip anything up to the .cfm
         var uri = variables.fw.buildCustomURL( "/product/:id" );
         uri = REReplace( uri, "^.*\.cf[cm]", "" );

@@ -1,5 +1,5 @@
 component {
-    variables._fw1_version = "4.3.0";
+    variables._fw1_version = "5.0.0";
 /*
     Copyright (c) 2016-2018, Sean Corfield
 
@@ -21,8 +21,8 @@ component {
             return request._fw1.theFramework;
         } catch ( any e ) {
             throw(
-                type = "FW1.FacadeException", message = "Unable to locate FW/1 for this request",
-                detail = "It appears that you asked for the facade in a request that did not originate in FW/1?"
+                type = "FW1.FacadeException", message = "Unable to locate Ziggy MVC for this request",
+                detail = "It appears that you asked for the facade in a request that did not originate in Ziggy MVC?"
             );
         }
     }

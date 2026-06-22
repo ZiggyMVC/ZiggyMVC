@@ -679,7 +679,7 @@ component {
     }
 
     /*
-     * you can override this to dynamically tell FW/1 to not handle
+     * you can override this to dynamically tell Ziggy to not handle
      * specific requests - by default it uses the unhandledExtensions
      * and unhandledPaths configuration items so if you want that as
      * well as your own custom paths, write a test like:
@@ -708,7 +708,7 @@ component {
     }
 
     /*
-     * Exotic utility function to create proxies for FW/1 methods that can be
+     * Exotic utility function to create proxies for Ziggy methods that can be
      * called from Java: can be used with external rendering engines, for example
      * NOTE: requires Java 8 for Function<> interface!
      */
@@ -824,7 +824,7 @@ component {
 
     /*
      * this can be overridden if you want to change the behavior when
-     * FW/1 cannot find a matching view
+     * Ziggy cannot find a matching view
      */
     public any function onMissingView( struct rc ) {
         // unable to find a matching view - fail with a nice exception
@@ -836,9 +836,9 @@ component {
 
     /*
      * This can be overridden if you want to change the behavior when
-     * FW/1 encounters an error when trying to populate bean properties
+     * Ziggy encounters an error when trying to populate bean properties
      * using all of the keys in the request context (rather than a
-     * specific list of keys).  By default FW/1 silently ignores these errors.
+     * specific list of keys).  By default Ziggy silently ignores these errors.
      * Available in the arguments are the bean cfc and the property that was
      * being set when the error occurred as well as the request context structure.
      * You can also reference the cfcatch variable for details about the error.
@@ -1295,12 +1295,12 @@ component {
                 if ( variables.framework.diOverrideAllowed ) {
                     // we still log a warning because this is strange behavior
                     var out = createObject( "java", "java.lang.System" ).out;
-                    out.println( "FW/1: WARNING: setBeanFactory() called more than once - use diEngine = 'none'?" );
-                    internalFrameworkTrace( message = "FW/1: WARNING: setBeanFactory() called more than once - use diEngine = 'none'?", traceType = 'WARNING' );
+                    out.println( "Ziggy MVC: WARNING: setBeanFactory() called more than once - use diEngine = 'none'?" );
+                    internalFrameworkTrace( message = "Ziggy MVC: WARNING: setBeanFactory() called more than once - use diEngine = 'none'?", traceType = 'WARNING' );
                 } else {
                     throw( type = "FW1.Warning",
-                           message = "setBeanFactory() called more than once - use diEngine = 'none'?",
-                           detail = "Either set diEngine to 'none' or let FW/1 manage your bean factory for you." );
+                            message = "setBeanFactory() called more than once - use diEngine = 'none'?",
+                            detail = "Either set diEngine to 'none' or let Ziggy manage your bean factory for you." );
                 }
             }
             getFw1App().factory = beanFactory;
@@ -1451,7 +1451,7 @@ component {
     /*
      * call this in setupApplication() to load the modules for which
      * you set up moduleMappings() using the function above -- the
-     * frameworkPath argument can override the default location for FW/1
+     * frameworkPath argument can override the default location for Ziggy MVC
      */
   	public void function installModules( string frameworkPath = "framework" ) {
     		var bf = new "#frameworkPath#.WireBoxAdapter"();
@@ -1618,8 +1618,8 @@ component {
     private void function deprecated( boolean throwit, string message ) {
         if ( throwit ) {
             throw( type="FW1.Deprecated",
-                   message="Deprecated: #message#",
-                   detail="This feature is deprecated: you need to configure FW/1 to allow it (or update your code)." );
+                    message="Deprecated: #message#",
+                    detail="This feature is deprecated: you need to configure Ziggy to allow it (or update your code)." );
         } else {
             var out = createObject( "java", "java.lang.System" ).out;
             out.println( "FW/1: DEPRECATED: " & message );
@@ -1675,7 +1675,7 @@ component {
         }
         getPageContext().getResponse().setStatus( 500 );
         if ( early ) {
-            writeOutput( '<h1>Exception occured before FW/1 was initialized</h1>');
+            writeOutput( '<h1>Exception occured before Ziggy was initialized</h1>');
         } else {
             writeOutput( '<h#h#>' & ( indirect ? 'Original exception ' : 'Exception' ) & ' in #encodeForHTML(event)#</h#h#>' );
             if ( structKeyExists( request, 'failedAction' ) ) {
@@ -1726,7 +1726,7 @@ component {
             baseMetadata.__fw1_setters = setters;
         }
         if ( !structKeyExists( cfc, '__fw1_version' ) ) {
-            // gather up explicit setters as well - except for FW/1 / Application.cfc
+            // gather up explicit setters as well - except for Ziggy / Application.cfc
             for ( var member in cfc ) {
                 var method = cfc[ member ];
                 var n = len( member );
@@ -2315,7 +2315,7 @@ component {
             var fn_type = 'render_' & renderType;
             if ( structKeyExists( variables, fn_type ) ) {
                 renderType = variables[ fn_type ];
-                // evaluate with no FW/1 context!
+                // evaluate with no Ziggy context!
                 out = renderType( request._fw1.renderData );
             } else {
                 throw( type = 'FW1.UnsupportedRenderType',
@@ -2607,7 +2607,7 @@ component {
         if ( !structKeyExists(variables.framework, 'SESOmitIndex') ) {
             variables.framework.SESOmitIndex = false;
         }
-        // NOTE: unhandledExtensions is a list of file extensions that are not handled by FW/1
+        // NOTE: unhandledExtensions is a list of file extensions that are not handled by Ziggy
         if ( !structKeyExists(variables.framework, 'unhandledExtensions') ) {
             variables.framework.unhandledExtensions = 'cfc';
         }
@@ -2749,7 +2749,7 @@ component {
             structAppend( variables.framework.optionsAccessControl, defaultAccessControl, false );
         }
         request._fw1.doTrace = variables.framework.trace;
-        // add this as a fingerprint so autowire can detect FW/1 CFC:
+        // add this as a fingerprint so autowire can detect Ziggy CFC:
         this.__fw1_version = variables.framework.version;
         variables._fw1_defaults_initialized = true;
     }

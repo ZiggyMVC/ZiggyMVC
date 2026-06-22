@@ -7,6 +7,6 @@ component extends=framework.one {
         viewsFolder : "pages"
     };
     function setupView( rc ) {
-        rc.message = "Rendered by FW/1 version " & variables.framework.version;
+        rc.message = "Rendered by Ziggy MVC version " & variables.framework.version;
     }
 }

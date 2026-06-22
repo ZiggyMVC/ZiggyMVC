@@ -1,26 +1,27 @@
 {
-    "name":"Framework One",
-    "slug":"cf-mvc",
+    "name":"Ziggy MVC",
+    "slug":"ziggy-mvc",
     "version":"5.0.0",
     "author":"South of Shasta",
-    "location":"southofshasta/cf-mvc#develop",
+    "location":"southofshasta/ZiggyMVC#develop",
     "createPackageDirectory":true,
     "packageDirectory":"framework",
     "Homepage":"http://framework-one.github.io/",
     "Documentation":"http://framework-one.github.io/documentation/",
     "Repository":{
         "type":"git",
-        "URL":"https://github.com/southofshasta/cf-mvc.git"
+        "URL":"https://github.com/southofshasta/ZiggyMVC"
     },
-    "Bugs":"https://github.com/southofshasta/cf-mvc/issues",
-    "shortDescription":"FW/1 - Framework One - is a family of small, lightweight, convention-over-configuration frameworks, primarily for CFML.",
-    "description":"FW/1 - Framework One - is a family of small, lightweight, convention-over-configuration frameworks, primarily for CFML. FW/1 itself provides MVC, DI/1 provides dependency injection (a.k.a. inversion of control), and AOP/1 provides aspect-oriented programming features on top of DI/1.",
+    "Bugs":"https://github.com/southofshasta/ZiggyMVC/issues",
+    "shortDescription":"ZiggyMVC - is a family of small, lightweight, convention-over-configuration frameworks, primarily for CFML.",
+    "description":"ZiggyMVC - is a family of small, lightweight, convention-over-configuration frameworks, primarily for CFML. ZiggyMVC itself provides MVC, DI/1 provides dependency injection (a.k.a. inversion of control), and AOP/1 provides aspect-oriented programming features on top of DI/1.",
     "instructions":"http://framework-one.github.io/documentation/",
-    "changelog":"https://github.com/southofshasta/cf-mvc/commits/develop",
+    "changelog":"https://github.com/southofshasta/ZiggyMVC/commits/develop",
     "type":"mvc",
     "keywords":[
-        "fw1",
-        "framework one",
+        "ziggy",
+        "ziggymvc",
+        "ziggy mvc",
         "mvc",
         "conventions"
     ],
@@ -48,7 +49,7 @@
     "Contributors":[
         {
             "name":"Contributors List",
-            "url":"https://github.com/southofshasta/cf-mvc/graphs/contributors"
+            "url":"https://github.com/southofshasta/ZiggyMVC/graphs/contributors"
         }
     ],
     "ignore":[

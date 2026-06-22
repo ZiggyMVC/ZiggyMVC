@@ -1,7 +1,7 @@
 component extends="wirebox.system.ioc.Injector" {
-    variables._fw1_version = "4.3.0";
+    variables._fw1_version = "5.0.0";
 /*
-    Copyright (c) 2010-2018, Sean Corfield
+    Copyright (c) 2026 South of Shasta, Nolan Erck
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@ component extends="wirebox.system.ioc.Injector" {
     limitations under the License.
 */
 
-    // the FW/1 requirements for a bean factory are very simple:
+    // the Ziggy requirements for a bean factory are very simple:
 
     public boolean function containsBean( string beanName ) {
         return super.containsInstance( beanName );

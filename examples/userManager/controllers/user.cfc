@@ -8,7 +8,7 @@ component accessors=true {
     }
 
     function default( rc ) {
-        rc.message = "Welcome to the Framework One User Manager application demo!";
+        rc.message = "Welcome to the ZiggyMVC User Manager application demo!";
     }
 
     function delete( rc ) {

@@ -43,7 +43,7 @@ component extends="mxunit.framework.TestCase" {
 	        variables.fw.onError(exception, event);
         }
         assertFalse(output CONTAINS "Element FRAMEWORK.USINGSUBSYSTEMS is undefined in VARIABLES", "Didn't expect failure in early exception");
-        assertTrue(output CONTAINS "Exception occured before FW/1 was initialized", "Expected message about early exception");
+        assertTrue(output CONTAINS "Exception occured before Ziggy was initialized", "Expected message about early exception");
     }
 
     private void function exceptionCapture( any exception)

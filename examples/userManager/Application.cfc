@@ -16,10 +16,10 @@ component {
     function _get_framework_one() {
         if ( !structKeyExists( request, '_framework_one' ) ) {
 
-            // create your FW/1 application:
+            // create your Ziggy MVC application:
             request._framework_one = new MyApplication();
 
-            // you can specify FW/1 configuration as an argument:
+            // you can specify Ziggy configuration as an argument:
             // request._framework_one = new framework.one({
             //     base : '/app',
             //     trace : true
@@ -36,7 +36,7 @@ component {
         return request._framework_one;
     }
 
-    // delegation of lifecycle methods to FW/1:
+    // delegation of lifecycle methods to Ziggy MVC:
     function onApplicationStart() {
         return _get_framework_one().onApplicationStart();
     }
