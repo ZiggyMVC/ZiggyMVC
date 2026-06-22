@@ -4,12 +4,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Ziggy MVC - Examples</title>
 		<base href="<cfoutput>#iif( CGI.HTTPS eq "on", de("https"), de("http") ) & "://" & CGI.HTTP_HOST & getDirectoryFromPath( CGI.SCRIPT_NAME )#</cfoutput>" />
-		<link rel="stylesheet" type="text/css" href="../css/fw1.css" />
+		<link rel="stylesheet" type="text/css" href="../css/ziggy.css" />
 	</head>
 	<body>
 		<div class="wrap">
 			<div class="page">
-				<!--- <img src="../css/fw1logo7.jpg"/> --->
+				<img src="../css/ziggy-mvc-logo.svg"/>
 				<cfoutput>#body#</cfoutput>
 				<p><a href="<cfoutput>#buildURL( ':main.default' )#</cfoutput>">Examples Home</a></p>
 			</div>
