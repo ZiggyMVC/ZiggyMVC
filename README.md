@@ -1,27 +1,17 @@
-![fw1_logo](https://github.com/southofshasta/cf-mvc/blob/develop/css/fw1logo7.jpg)
+# Ziggy MVC
 
-# FW/1 (Framework One)
-![Build Status](https://github.com/southofshasta/cf-mvc/actions/workflows/fw1_java11.yml/badge.svg)
-![4.3.2 Deploy Status](https://github.com/southofshasta/cf-mvc/actions/workflows/deploy_4.3.2.yml/badge.svg)
+Ziggy MVC is an MVC framework the CFML community, created originally as Framework-1 (https://github.com/framework-one/fw1) and then forked by South of Shasta (https://southofshasta.com/) and other members of the CFML community. For various reasons, development on Framework-1 had stalled, and we felt it best to create a fresh start, but built on top of the hardwork that FW/1 provided for us. Extra special thanks to Sean Corfield, the original creater or FW/1.
 
-[//]: # "![Build Status](https://github.com/southofshasta/cf-mvc/actions/workflows/fw1_boxlang.yml/badge.svg)"
+Ziggy MVC is backwards compatible with Framework-1. Your applications should work as-is on the Ziggy MVC codebase. Additionally, all of the
+FW/1 documentation and same code is still valid and works with Ziggy MVC. We have not (yet) made any breaking changes to the framework. Any such updates will be documented.
 
-This FW/1 directory is a complete web application and expects to live in its own
-webroot if you plan to run the applications within it. To use FW/1 in a separate
-webroot you can either copy the `framework` directory to that webroot or add a mapping
-for `/framework` to the `framework` folder inside this FW/1 directory. Note that since
-your `Application.cfc` needs to extend `framework.one`, you have to add the mapping
-in your admin - you can't just use a per-application mapping.
-
-Please read the [Framework One Code of Conduct](https://github.com/southofshasta/cf-mvc/blob/develop/CODE_OF_CONDUCT.md) - we want FW/1 to be a welcoming and supportive environment for everyone to feel comfortable contributing!
+Please read the [Framework One Code of Conduct](https://github.com/framework-one/fw1/blob/develop/CODE_OF_CONDUCT.md) - we want FW/1 to be a welcoming and supportive environment for everyone to feel comfortable contributing!
 
 # Resources
 
-**Demo sites:** v4.3.2 - https://fw1-4.3.2.mycfspace.org
+**Project home:** https://github.com/framework-one/fw1
 
-**Project home:** https://github.com/southofshasta/cf-mvc
-
-**Documentation / Wiki:** http://framework-one.github.io/documentation/ / http://github.com/southofshasta/cf-mvc/wiki
+**Documentation / Wiki:** http://framework-one.github.io/documentation/ / http://github.com/framework-one/fw1/wiki
 
 **Blog:** http://framework-one.github.io
 
@@ -31,9 +21,9 @@ Please read the [Framework One Code of Conduct](https://github.com/southofshasta
 
 # Running the Tests
 
-FW/1 is setup to run tests using [GitHub Actions](https://github.com/southofshasta/cf-mvc/actions/workflows/fw1_java11.yml) using the `fw1_java11.yml` and `fw1_boxlang.yml` workflow files.
+FW/1 is setup to run tests on [Travis CI](https://travis-ci.org/framework-one/fw1) using the `.travis.yml` file.
 
-To run tests locally, you'll need [CommandBox](https://www.ortussolutions.com/products/commandbox) installed.
+To run tests manually, you'll need [CommandBox](https://www.ortussolutions.com/products/commandbox) installed.
 
 Then run `box install` once to install the dependencies (TestBox is the only one currently).
 
@@ -53,6 +43,6 @@ If you get any failures, you can run this with more verbose, but still compact o
 
 # Copyright and License
 
-Copyright (c) 2009-2024, Sean Corfield (and others -- see individual files for additional copyright holders). All rights reserved.
+Copyright (c) 2009-2018, Sean Corfield (and others -- see individual files for additional copyright holders). All rights reserved.
 The use and distribution terms for this software are covered by the Apache Software License 2.0 (http://www.apache.org/licenses/LICENSE-2.0) which can also be found in the file LICENSE at the root of this distribution and in individual licensed files.
 By using this software in any fashion, you are agreeing to be bound by the terms of this license. You must not remove this notice, or any other, from this software.
