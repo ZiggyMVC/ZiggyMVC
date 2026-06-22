@@ -14,11 +14,11 @@ Please read the [Ziggy MVC Code of Conduct](https://github.com/ZiggyMVC/ZiggyMVC
 
 **Documentation / Wiki:** http://ziggymvc.github.io/documentation/
 
-**Blog:** http://framework-one.github.io
+**Blog:** http://ziggymvc.github.io
 
 # Running the Tests
 
-Ziggy MVC is setup to run tests on [Travis CI](https://travis-ci.org/framework-one/fw1) using the `.travis.yml` file.
+<!-- Ziggy MVC is setup to run tests on [Travis CI](https://travis-ci.org/framework-one/fw1) using the `.travis.yml` file. -->
 
 To run tests manually, you'll need [CommandBox](https://www.ortussolutions.com/products/commandbox) installed.
 
@@ -40,9 +40,9 @@ If you get any failures, you can run this with more verbose, but still compact o
 
 # Copyright and License
 
-Framework-1 is Copyright (c) 2009-2018, Sean Corfield (and others -- see individual files for additional copyright holders). All rights reserved. 
-
 Ziggy MVC is Copyright (c) 2026, South of Shasta (and others -- see individual files for additional copyright holders). All rights reserved.
+
+Framework-1 is Copyright (c) 2009-2018, Sean Corfield (and others -- see individual files for additional copyright holders). All rights reserved. 
 
 The use and distribution terms for this software are covered by the Apache Software License 2.0 (http://www.apache.org/licenses/LICENSE-2.0) which can also be found in the file LICENSE at the root of this distribution and in individual licensed files.
 By using this software in any fashion, you are agreeing to be bound by the terms of this license. You must not remove this notice, or any other, from this software.
