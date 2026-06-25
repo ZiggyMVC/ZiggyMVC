@@ -5,7 +5,7 @@
     "author":"South of Shasta",
     "location":"ZiggyMVC/ZiggyMVC#develop",
     "createPackageDirectory":true,
-    "packageDirectory":"ZiggyMVC",
+    "packageDirectory":"framework",
     "Homepage":"http://ziggymvc.github.io/",
     "Documentation":"http://ziggymvc.github.io/documentation/",
     "Repository":{
