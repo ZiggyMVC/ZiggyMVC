@@ -1,5 +1,5 @@
 component {
-    variables._fw1_version = "4.3.2";
+    variables._fw1_version = "5.0.0";
     variables._di1_version = variables._fw1_version;
 /*
     Copyright (c) 2010-2018, Sean Corfield
@@ -55,7 +55,8 @@ component {
             // recent FW/1 + DI/1 + AOP/1 exclusions:
             '/framework/aop.cfc', '/framework/beanProxy.cfc',
             '/framework/ioc.cfc', '/framework/WireBoxAdapter.cfc',
-            '/framework/one.cfc'
+            '/framework/one.cfc',
+            '/framework/ziggy.cfc'
         ];
         variables.listeners = 0;
         setupFrameworkDefaults();

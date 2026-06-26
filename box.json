@@ -3,20 +3,20 @@
     "slug":"ziggy-mvc",
     "version":"5.0.0",
     "author":"South of Shasta",
-    "location":"southofshasta/ZiggyMVC#develop",
+    "location":"ZiggyMVC/ZiggyMVC#main",
     "createPackageDirectory":true,
     "packageDirectory":"framework",
-    "Homepage":"http://framework-one.github.io/",
-    "Documentation":"http://framework-one.github.io/documentation/",
+    "Homepage":"http://ziggymvc.github.io/",
+    "Documentation":"http://ziggymvc.github.io/documentation/",
     "Repository":{
         "type":"git",
-        "URL":"https://github.com/southofshasta/ZiggyMVC"
+        "URL":"https://github.com/ZiggyMVC/ZiggyMVC"
     },
-    "Bugs":"https://github.com/southofshasta/ZiggyMVC/issues",
+    "Bugs":"https://github.com/ZiggyMVC/ZiggyMVC/issues",
     "shortDescription":"ZiggyMVC - is a family of small, lightweight, convention-over-configuration frameworks, primarily for CFML.",
     "description":"ZiggyMVC - is a family of small, lightweight, convention-over-configuration frameworks, primarily for CFML. ZiggyMVC itself provides MVC, DI/1 provides dependency injection (a.k.a. inversion of control), and AOP/1 provides aspect-oriented programming features on top of DI/1.",
-    "instructions":"http://framework-one.github.io/documentation/",
-    "changelog":"https://github.com/southofshasta/ZiggyMVC/commits/develop",
+    "instructions":"http://ziggymvc.github.io/documentation/",
+    "changelog":"https://github.com/ZiggyMVC/ZiggyMVC/commits/develop",
     "type":"mvc",
     "keywords":[
         "ziggy",
@@ -49,7 +49,7 @@
     "Contributors":[
         {
             "name":"Contributors List",
-            "url":"https://github.com/southofshasta/ZiggyMVC/graphs/contributors"
+            "url":"https://github.com/ZiggyMVC/ZiggyMVC/graphs/contributors"
         }
     ],
     "ignore":[

@@ -5,17 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Ziggy MVC</title>
 		<base href="<cfoutput>#iif( CGI.HTTPS eq "on", de("https"), de("http") ) & "://" & CGI.HTTP_HOST & getDirectoryFromPath( CGI.SCRIPT_NAME )#</cfoutput>" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/litera/bootstrap.min.css" integrity="sha384-enpDwFISL6M3ZGZ50Tjo8m65q06uLVnyvkFO3rsoW0UC15ATBFz3QEhr3hmxpYsn" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/ziggy.css" />
 	</head>
 	<body>
 		<div class="container-fluid">
 			<div class="page">
-				<!--- <img src="css/fw1logo7.jpg"/> --->
+				<img src="css/ziggy-mvc-logo.svg"/>
 				<cfoutput>#body#</cfoutput>
 			</div>
 			<div class="text-center">
-				<a href="https://github.com/southofshasta/ZiggyMVC">Ziggy MVC</a> is copyright (c) 2026-<cfoutput>#year( now() )#</cfoutput> South of Shasta -
+				<a href="https://github.com/ZiggyMVC/ZiggyMVC">Ziggy MVC</a> is copyright (c) 2026-<cfoutput>#year( now() )#</cfoutput> South of Shasta -
 			<a href="http://www.apache.org/licenses/LICENSE-2.0">Licensed under the Apache License, Version 2.0</a><br />
 				You are running Ziggy MVC version <cfoutput>#variables.framework.version# on #server.coldfusion.productname & " " &
 					( structKeyExists( server, "lucee" ) ?

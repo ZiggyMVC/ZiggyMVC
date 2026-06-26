@@ -1,0 +1,6 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ziggy MVC app icon">
+  <rect width="512" height="512" rx="114" fill="#1A1A2E"/>
+  <polyline points="150,176 226,256 150,336" fill="none" stroke="#9D86FF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="226,176 302,256 226,336" fill="none" stroke="#C56BE0" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="302,176 378,256 302,336" fill="none" stroke="#F06BAB" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
