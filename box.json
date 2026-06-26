@@ -3,7 +3,7 @@
     "slug":"ziggy-mvc",
     "version":"5.0.0",
     "author":"South of Shasta",
-    "location":"ZiggyMVC/ZiggyMVC#develop",
+    "location":"ZiggyMVC/ZiggyMVC#main",
     "createPackageDirectory":true,
     "packageDirectory":"framework",
     "Homepage":"http://ziggymvc.github.io/",
