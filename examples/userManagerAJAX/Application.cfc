@@ -1,4 +1,4 @@
-component extends="framework.one" {
+component extends="framework.ziggy" {
 	
 	this.mappings["/userManagerAJAX"] = getDirectoryFromPath(getCurrentTemplatePath());
 	this.name = 'fw1-userManagerAJAX';

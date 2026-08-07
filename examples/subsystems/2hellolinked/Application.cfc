@@ -1,2 +1,2 @@
-component extends=framework.one {
+component extends=framework.ziggy {
 }

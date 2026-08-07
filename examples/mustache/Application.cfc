@@ -1,4 +1,4 @@
-component extends=framework.one {
+component extends=framework.ziggy {
 
     variables.mustacheJAR = expandPath( "compiler-0.9.1.jar" );
     this.javaSettings.loadPaths = [ variables.mustacheJAR ];

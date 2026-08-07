@@ -16,7 +16,7 @@ component {
         if ( !structKeyExists( request, '_framework_one' ) ) {
 
             // create your Ziggy application:
-            request._framework_one = new framework.one( {
+            request._framework_one = new framework.ziggy( {
 		        SESOmitIndex = true,
                 diLocations = [
                     "model", "controllers", "beans", "services" // to account for the variety of D/I locations in our examples
@@ -26,7 +26,7 @@ component {
             } );
 
             // you can specify Ziggy configuration as an argument:
-            // request._framework_one = new framework.one({
+            // request._framework_one = new framework.ziggy({
             //     base : '/app',
             //     trace : true
             // });
