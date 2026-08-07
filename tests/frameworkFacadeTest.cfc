@@ -16,7 +16,7 @@ component extends="mxunit.framework.TestCase" {
     }
 
     function testFacadeWithFW1() {
-        var fw = new framework.one();
+        var fw = new framework.ziggy();
         fw.onRequestStart( "" );
         var facade = new framework.facade();
         assertTrue( structKeyExists( facade, "getBeanFactory" ), "Constructed facade does not look like Ziggy MVC" );

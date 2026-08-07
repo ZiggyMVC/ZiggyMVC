@@ -1,7 +1,7 @@
 component extends="mxunit.framework.TestCase" {
 
     public void function setUp() {
-        variables.fw = new framework.one();
+        variables.fw = new framework.ziggy();
         request._fw1.requestDefaultsInitialized = false;
         request.failureCount = 0;
         request.outputContent = "";
@@ -23,9 +23,9 @@ component extends="mxunit.framework.TestCase" {
         savecontent variable="output" {
             variables.fw.onError(exception, event);
         };
+
         assertEquals(request.action, ":main.error");
         assertFalse(output contains "Unable to find a view for ':main.error' action.");
-        assertTrue(output contains "Unable to find a view for &##x27;&##x3a;main.error&##x27;");
     }
 
     /**

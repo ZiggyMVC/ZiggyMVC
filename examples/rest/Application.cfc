@@ -1,10 +1,10 @@
 component {
     this.name = 'fw1-examples-rest';
-    this.mappings[ '/framework' ] = expandPath( '../framework' );
+    this.mappings[ '/framework' ] = expandPath( '../../framework' );
     
     function _get_framework_one() {
         if ( !structKeyExists( request, '_framework_one' ) ) {
-            request._framework_one = new framework.one( {
+            request._framework_one = new framework.ziggy( {
 		        decodeRequestBody = true,
                 reloadApplicationOnEveryRequest = true
             } );

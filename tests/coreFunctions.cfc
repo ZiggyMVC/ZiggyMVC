@@ -1,7 +1,7 @@
 component extends=testbox.system.BaseSpec {
 
   function beforeAll() {
-    variables.fw = new framework.one();
+    variables.fw = new framework.ziggy();
     variables.fw.__config = __config;
   }
 

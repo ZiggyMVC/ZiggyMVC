@@ -1,3 +1,3 @@
-component extends="framework.one" {
+component extends="framework.ziggy" {
 	variables.framework = { generateSES = true };
 }

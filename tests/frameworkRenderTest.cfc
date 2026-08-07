@@ -2,13 +2,13 @@ component extends="mxunit.framework.TestCase" {
 
     public void function setUp() {
         structDelete(request,"_fw1"); // force a reset of tracing vars
-        variables.fw = new framework.one();
+        variables.fw = new framework.ziggy();
         variables.fw.enableTracing = _enableTracing;
         variables.fw.enableTracing();
-        request.fw = new framework.one();
+        request.fw = new framework.ziggy();
         request.fw.enableTracing = _enableTracing;
         request.fw.enableTracing();
-        variables.fwExtended = new traceRender.one();
+        variables.fwExtended = new traceRender.ziggy();
         variables.fwExtended.enableTracing = _enableTracing;
         variables.fwExtended.enableTracing();
     }

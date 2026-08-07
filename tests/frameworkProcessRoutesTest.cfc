@@ -1,7 +1,7 @@
 component extends="tests.InjectableTest" {
 
     public void function setUp() {
-        variables.fw = new framework.one();
+        variables.fw = new framework.ziggy();
         injectMethod( variables.fw, this, 'isFrameworkInitialized', 'isFrameworkInitialized' );
         variables.fwVars = getVariablesScope( variables.fw );
         variables.fwVars.framework.resourceRouteTemplates = [
