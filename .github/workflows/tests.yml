@@ -38,4 +38,21 @@ jobs:
       run: box server start cfengine=${{ matrix.engine }} port=8500 openbrowser=false
     
     - name: Run tests
-      run: box testbox run verbose=false
+      run: |
+        # Fetch test results directly (ignoring HTTP status code from old TestBox)
+        RESULTS=$(curl -s "http://localhost:8500/tests/runner.cfm?recurse=true&reporter=json")
+        echo "$RESULTS" | jq .
+
+        # Check for failures or errors in the JSON response
+        TOTAL_FAIL=$(echo "$RESULTS" | jq '.totalFail')
+        TOTAL_ERROR=$(echo "$RESULTS" | jq '.totalError')
+
+        echo "Total Failures: $TOTAL_FAIL"
+        echo "Total Errors: $TOTAL_ERROR"
+
+        if [ "$TOTAL_FAIL" != "0" ] || [ "$TOTAL_ERROR" != "0" ]; then
+          echo "Tests failed!"
+          exit 1
+        fi
+
+        echo "All tests passed!"
