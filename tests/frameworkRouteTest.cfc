@@ -1,7 +1,7 @@
 component extends="tests.InjectableTest" {
 
     public void function setUp() {
-        variables.fw = new framework.one();
+        variables.fw = new framework.ziggy();
         request._fw1.requestDefaultsInitialized = false;
         variables.fwVars = getVariablesScope( variables.fw );
         variables.fwVars.framework.routesCaseSensitive = true;

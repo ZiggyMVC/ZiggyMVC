@@ -1,7 +1,7 @@
 component extends="mxunit.framework.TestCase" {
 
 	public void function setUp() {
-		variables.fw = new framework.one();
+		variables.fw = new framework.ziggy();
 		clearFW1MetaData();
 	}
 

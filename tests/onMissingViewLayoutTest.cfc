@@ -2,7 +2,7 @@ component extends="tests.InjectableTest" {
 
     public void function setUp() {
         clearFrameworkFromRequest();
-        variables.fw = new framework.one();
+        variables.fw = new framework.ziggy();
         variables.fwvars = getVariablesScope( variables.fw );
         variables.fwvars.framework = {
             base = "/tests/omv"
