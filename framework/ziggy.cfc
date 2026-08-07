@@ -2635,7 +2635,7 @@ component {
             variables.framework.unhandledErrorCaught = false;
         }
         if ( !structKeyExists(variables.framework, 'applicationKey') ) {
-            variables.framework.applicationKey = 'framework.one';
+            variables.framework.applicationKey = 'framework.ziggy';
         }
         if ( !structKeyExists( variables.framework, 'cacheFileExists' ) ) {
             variables.framework.cacheFileExists = false;

@@ -16,7 +16,7 @@ component {
         if ( !structKeyExists( request, '_framework_one' ) ) {
 
             // create your ZiggyMVC application:
-            request._framework_one = new framework.one( {
+            request._framework_one = new framework.ziggy( {
                 trace = true,
                 missingview = 'main.missingview',
                 base = getDirectoryFromPath( CGI.SCRIPT_NAME )
@@ -24,7 +24,7 @@ component {
             } );
 
             // you can specify ZiggyMVC configuration as an argument:
-            // request._framework_one = new framework.one({
+            // request._framework_one = new framework.ziggy({
             //     base : '/app',
             //     trace : true
             // });

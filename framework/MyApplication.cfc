@@ -1,4 +1,4 @@
-component extends="framework.one" {
+component extends="framework.ziggy" {
     // Version: Ziggy MVC 5.0.0
 
     // if you need to provide extension points, copy this to
@@ -6,7 +6,7 @@ component extends="framework.one" {
     // functions to it, then in Application.cfc use:
     //     request._framework_one = new MyApplication( config );
     // instead of:
-    //     request._framework_one = new framework.one( config );
+    //     request._framework_one = new framework.ziggy( config );
     // in the _get_framework_one() function.
     //
     // if you do not need extension points, you can ignore this

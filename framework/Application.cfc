@@ -18,10 +18,10 @@ component {
         if ( !structKeyExists( request, '_framework_one' ) ) {
 
             // create your Ziggy application:
-            request._framework_one = new framework.one();
+            request._framework_one = new framework.ziggy();
 
             // you can specify Ziggy configuration as an argument:
-            // request._framework_one = new framework.one({
+            // request._framework_one = new framework.ziggy({
             //     base : '/app',
             //     trace : true
             // });

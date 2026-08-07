@@ -1,4 +1,4 @@
-component extends="framework.one" {
+component extends="framework.ziggy" {
 	
 	/*
 		This is provided for illustration only - YOU SHOULD NOT USE THIS IN
@@ -52,7 +52,7 @@ component extends="framework.one" {
 		// set this to true to cache the results of fileExists for performance:
 		cacheFileExists = false,
 		// change this if you need multiple Ziggy applications in a single CFML application:
-		applicationKey = 'framework.one',
+		applicationKey = 'framework.ziggy',
         // change this if you want a different dependency injection engine:
         diEngine = 'di1',
         // change this if you want different locations to be scanned by the D/I engine:
