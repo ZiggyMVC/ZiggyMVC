@@ -1,16 +1,16 @@
-name: fw1 Java 11
+name: Ziggy MVC Tests
 
 on:
   push:
-    branches: [ "develop", "5.0.0" ]
+    branches: [ "main", "qa" ]
   pull_request:
-    branches: [ "develop", "5.0.0" ]
+    branches: [ "main", "qa" ]
 
 jobs:
   test:
     strategy:
       matrix:
-        engine: [ lucee@5, adobe@2023, adobe@2021, adobe@2018 ]
+        engine: [ lucee@7, adobe@2023, adobe@2021, adobe@2018 ]
 
     runs-on: ubuntu-latest
 
@@ -37,8 +37,22 @@ jobs:
     - name: Start the ${{ matrix.engine }} CFML engine
       run: box server start cfengine=${{ matrix.engine }} port=8500 openbrowser=false
     
-    - name: Run test
-      run: |        
-        testResults="echo $(box testbox run reporter=mintext)";
-        echo "$testResults";
-        if grep -i "\[Failures: [1-9][0-9]\?[0-9]\?\]\|\[Errors: [1-9][0-9]\?[0-9]\?\]\|<t[^>]*>\|<b[^>]*>" <<< $testResults;  then exit 1; fi
+    - name: Run tests
+      run: |
+        # Fetch test results directly (ignoring HTTP status code from old TestBox)
+        RESULTS=$(curl -s "http://localhost:8500/tests/runner.cfm?recurse=true&reporter=json")
+        echo "$RESULTS" | jq .
+
+        # Check for failures or errors in the JSON response
+        TOTAL_FAIL=$(echo "$RESULTS" | jq '.totalFail')
+        TOTAL_ERROR=$(echo "$RESULTS" | jq '.totalError')
+
+        echo "Total Failures: $TOTAL_FAIL"
+        echo "Total Errors: $TOTAL_ERROR"
+
+        if [ "$TOTAL_FAIL" != "0" ] || [ "$TOTAL_ERROR" != "0" ]; then
+          echo "Tests failed!"
+          exit 1
+        fi
+
+        echo "All tests passed!"
