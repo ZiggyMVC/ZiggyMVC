@@ -20,8 +20,6 @@ Please read the [Ziggy MVC Code of Conduct](https://github.com/ZiggyMVC/ZiggyMVC
 
 # Running the Tests
 
-<!-- Ziggy MVC is setup to run tests on [Travis CI](https://travis-ci.org/framework-one/fw1) using the `.travis.yml` file. -->
-
 To run tests manually, you'll need [CommandBox](https://www.ortussolutions.com/products/commandbox) installed.
 
 Then run `box install` once to install the dependencies (TestBox is the only one currently).
