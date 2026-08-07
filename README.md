@@ -28,7 +28,7 @@ Then run `box install` once to install the dependencies (TestBox is the only one
 
 Then start a server on port 8500 with your choice of CFML engine, e.g.,
 
-    box server start cfengine=lucee@5 port=8500
+    box server start cfengine=lucee@7 port=8500
 
 This will open a browser, running the Ziggy "Introduction" app.
 
