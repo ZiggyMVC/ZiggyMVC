@@ -20,7 +20,7 @@ component {
             request._framework_one = new MyApplication();
 
             // you can specify Ziggy configuration as an argument:
-            // request._framework_one = new framework.one({
+            // request._framework_one = new framework.ziggy({
             //     base : '/app',
             //     trace : true
             // });

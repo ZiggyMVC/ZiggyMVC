@@ -1,3 +1,3 @@
-component extends="framework.one" {
+component extends="framework.ziggy" {
 	this.name = 'fw1-remote';
 }

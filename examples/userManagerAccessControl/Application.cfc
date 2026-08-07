@@ -1,4 +1,4 @@
-component accessors=true extends="framework.one" {
+component accessors=true extends="framework.ziggy" {
 
 	property departmentService;
 
@@ -14,25 +14,33 @@ component accessors=true extends="framework.one" {
 
 	function setupApplication() {
 		application.adminEmail = 'admin@mysite.com';
-		if ( variables.keyExists( "departmentService" ) )
-			writeDump( var = variables.departmentService, label = "setupApplication" );
+		// if ( variables.keyExists( "departmentService" ) )
+		// {
+		// 	writeDump( var = variables.departmentService, label = "setupApplication" );
+		// }
 	}
 
 	function setupSession() {
 		controller( 'security.session' );
-		if ( variables.keyExists( "departmentService" ) )
-			writeDump( var = variables.departmentService, label = "setupSession" );
+		// if ( variables.keyExists( "departmentService" ) )
+		// {
+		// 	writeDump( var = variables.departmentService, label = "setupSession" );
+		// }
 	}
 
-	function setupRequest() {
+	function setupRequest() 
+	{
 		controller( 'security.authorize' );
-		if ( variables.keyExists( "departmentService" ) )
-			writeDump( var = variables.departmentService, label = "setupRequest" );
+		// if ( variables.keyExists( "departmentService" ) )
+		// {
+		// 	writeDump( var = variables.departmentService, label = "setupRequest" );
+		// }
 	}
 
 	function setupView( rc ) {
-		if ( variables.keyExists( "departmentService" ) ) {
-			writeDump( var = variables.departmentService, label = "setupView" );
+		if ( variables.keyExists( "departmentService" ) ) 
+		{
+			// writeDump( var = variables.departmentService, label = "setupView" );
 			rc.d1 = departmentService.get( 1 );
 		}
 	}

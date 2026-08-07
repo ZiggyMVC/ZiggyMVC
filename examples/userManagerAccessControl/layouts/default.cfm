@@ -47,17 +47,6 @@ function bbb() { }
 	</div>
 
 </div>
-<cfdump var="#rc#">
-<cftry>
-	<cfif aaa == bbb>
-		<p>aaa and bbb are equal -- WTF?</p>
-	<cfelse>
-		<p>aaa and bbb are different -- as expected!</p>
-	</cfif>
-	<cfcatch type="any">
-		<p>I haz a sad -- functions cannot be compared!</p>
-		<cfdump var="#cfcatch#" />
-	</cfcatch>
-</cftry>
+
 </body>
 </html>

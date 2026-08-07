@@ -1,4 +1,4 @@
-component extends="framework.one" {
+component extends="framework.ziggy" {
 	
 	this.name = "todoapp";
 
